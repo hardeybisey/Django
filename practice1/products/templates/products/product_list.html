@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>
+    <ol>
+    {% for item in objlist %}
+    <p> <a href = {{ item.get_absolute_url }} >{{item.title}} </a>
+        Description: {{item.description}} Price: {{item.price}}</p>
+    {% endfor %}
+    </ol>
+</p>
+{% endblock %}

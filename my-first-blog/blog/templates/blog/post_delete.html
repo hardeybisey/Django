@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <form method="POST" class="post-form"> {% csrf_token%}
+    <h2>Do you want to delete the post: </h2> {{post.title}}
+        <button onclick="location.href='{% url 'post_detail' pk=post.pk  %}'" type="button" class="save btn-secondary"> Cancel </button>
+        <button type="submit" class="save btn-secondary"> Yes </button>
+    </form>
+{% endblock content%}
